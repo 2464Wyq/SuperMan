@@ -116,13 +116,13 @@
     $(".Login").on("click",function (){
         $.ajax({
             type:'get',
-            url:'http://1.14.150.103:80/login',
+            url:'Login.txt',
             dataType:'json',
             data:{
                 userName:$(".userInp").val(),
                 userPassword:$(".pwdInp").val()},
             success:function (data) {
-                if (data!=0){
+                if (data===true){
                     alert("登入成功")
                     window.location.href="SecondPage.html"
                     console.log(data)
