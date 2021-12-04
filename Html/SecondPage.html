@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>欢迎 Welcome</title>
+    <script src="../Js/jquery-3.6.0.min.js"></script>
+    <script src="../Js/vue.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .div_head{
+            height: 50px;
+            line-height: 50px;
+            width: 100%;
+            background: rgba(148, 148, 148, 0.4);
+            cursor: pointer;
+        }
+        a{
+            color: white;
+            text-decoration:none;
+            font-size:25px;
+            font-style: italic;
+            padding-left: 270px;
+        }
+        .IndexCardForFiles{
+            margin-top: 180px;
+            margin-left:80px;
+            width: 300px;
+            height: 380px;
+            background: rgba(243, 235, 235, 0.21);
+            border-radius: 8px;
+        }
+        .HeadPhoto{
+            margin: 15px;
+            width: 100px;
+            height: 100px;
+            border-radius: 8px;
+        }
+        p{
+            font-size: 20px;
+            margin: 18px;
+            color: #696666;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body background="../img/background.jpg">
+    <div>
+        <div class="div_head">
+            <a href="#" id="PersonalHomePage">个人主页</a>
+            <a href="#" id="MyAlbum">个人相册</a>
+            <a href="#" id="PersonalHonor">个人荣誉</a>
+            <a href="#" id="LeavingMessage">留言</a>
+        </div>
+        <div class="IndexCardForFiles">
+            <img src="../img/HeadPhoto.png"class="HeadPhoto">
+            <p>昵称：  {{Name}}</p>
+            <p>生日：  {{Birthday}}</p>
+            <p>电话： {{Iphone}}</p>
+            <p>Q Q：&nbsp;{{QQ}}</p>
+            <p>微信：  {{WeChat}}</p>
+        </div>
+    </div>
+</body>
+<script>
+ var demo=new Vue({
+     el:'div',
+     data:{
+         Name:"偶尔躲躲乌云",
+         Birthday:"2002年7月17日",
+         Iphone:"15720956830",
+         QQ:"2275330737",
+         WeChat:"Q175921"
+     },
+ });
+$("#PersonalHomePage").on("click",function () {
+    window.location.href="PersonalHomePage.html"
+});
+$("#MyAlbum").on("click",function () {
+    window.location.href="MyAlbum.html"
+});
+$("#PersonalHonor").on("click",function () {
+    window.location.href="PersonalHonor.html"
+});
+$("#LeavingMessage").on("click",function () {
+    window.location.href="LeavingMessage.html"
+});
+</script>
+</html>
